@@ -1,0 +1,207 @@
+*{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    background-color:rgb(245, 245, 245) ;
+}
+/*Grids*/
+.grid-index{
+    display: grid;
+    grid-template-areas: 
+    "encabezado"
+    "mennu"
+    "banner"
+    "pie" ;
+}
+
+
+/*Header*/
+.header{
+    grid-area: encabezado;
+}
+
+.header__logo{
+    display: flex; 
+    align-content: center;
+    justify-content: center;
+}
+
+/*Nav*/
+.nav{
+    grid-area: mennu;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.nav__menu{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0;
+}
+
+.nav__links{
+    background-color: white;
+    border: solid 2px #c2c1c1;
+    display:inline-flex;
+    height: 40px;
+    margin: 3px;
+}
+
+.nav__link{
+    display:inline-flex;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 3px 33px ;
+    align-items: center;
+}
+
+/*Animacion*/
+.nav__links:hover{
+    background-color:#c2c1c1 ;
+    border: solid 1px black;
+    transform: scale(1.1);
+}
+
+.nav__link:hover{
+    color: black;
+}
+
+/*Banner*/
+.banner{
+    width: 100%;
+    grid-area: banner;
+}
+
+.banner__img{
+    width: 100%;
+}
+
+
+/*Noticias*/
+.tituloNoticia{
+    grid-area: tituloPagNoticia;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+.notices{
+    margin-bottom: 20px !important;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.color-button{
+    border: black !important;
+    background-color: black !important;
+    color: white !important;
+}
+/*Formulario */
+
+.consulForm{
+    width: 500px;
+    margin: auto;
+    background-color: rgba(180, 175, 175, 0.808);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+h2{
+    background-color: #61605ea2;
+    text-align: center;
+    margin: 0;
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.consulForm__item{
+    width: 100%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.consulForm__boton{
+    background:rgb(58, 56, 56);
+    color: white;
+    width: 100%;
+} 
+
+/*Cartas*/
+
+.carta{
+    width: 300px;
+    height: 500px;
+    border: 3px solid black ;
+    margin: 20px 30px;
+    display: inline-block;
+}
+
+.carta__titulo{
+    border-bottom: 3px  solid black ;
+    text-align:center;
+    font-size: 20px;
+}
+
+.carta__descripcion{
+    border-top :2px solid black;
+    text-align: justify;
+}
+
+.carta__DD{
+    border-top :2px solid black;
+    text-align: center;
+}
+
+.carta__img{
+    height: 300px;
+    padding-left: 45px;
+}
+
+/*Footer*/
+
+.footer{
+    background-color: #424242;
+    grid-area: pie;
+    color: white;
+    height: 10vh;
+    display: flex;
+    align-content:center;
+    justify-content:center;
+    align-items: center;
+}
+
+@media screen and (max-width: 750px){
+    .nav__menu{
+        flex-direction:column;
+        width: 100%;
+    }
+    .nav__links{
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .nav__menu{
+        flex-direction:column;
+        width: 100%;
+    }
+    .nav__links{
+        justify-content: center;
+        justify-items: center;
+    }
+    .consulForm{
+        width: auto;
+    }
+}
